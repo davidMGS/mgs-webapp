@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+	<!--<![endif]-->
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+		<title>Mountain Gap Solutions</title>
+		<meta name="description" content=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="resources/styles/bootstrap-responsive.css" rel="stylesheet">
+		<link rel="stylesheet" href="resources/styles/bootstrap.min.css"/>
+		<link rel="stylesheet" href="resources/styles/main.css"/>
+	</head>
+	<body ng-app="mgsApp">
+
+		<!-- NavBar -->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<ng:include src="'views/main/navbar.html'"></ng:include>
+		</div>
+
+		<!-- Application content here -->
+		<div class="container" ng-view></div>
+
+		<hr>
+		<div class="container">
+			<p>
+				© Mountain Gap Solutions 2012
+			</p>
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<script>
+			if ( typeof jQuery == 'undefined') {
+				document.write(decodeURIComponent('%3Cscript src="scripts/vendor/jquery-1.8.1.min.js"%3E%3C/script%3E'));
+			}
+		</script>
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+		<!-- Uncomment to enable ngResource module. Don't forget to enable the fallback bellow.
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-resource.min.js"></script>
+		-->
+		<!-- Uncomment to enable ngSanitize module. Don't forget to enable the fallback bellow.
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular-sanitize.min.js"></script>
+		-->
+		<script>
+			if ( typeof angular == 'undefined') {
+				document.write(decodeURIComponent('%3Cscript src="scripts/vendor/angular.min.js"%3E%3C/script%3E'));
+				/* Uncomment to enable ngResource module.
+				 document.write(decodeURIComponent('%3Cscript src="scripts/vendor/angular-resource.min.js"%3E%3C/script%3E'));
+				 */
+				/* Uncomment to enable ngSanitize module.
+				 document.write(decodeURIComponent('%3Cscript src="scripts/vendor/angular-sanitize.min.js"%3E%3C/script%3E'));
+				 */
+			}
+		</script>
+		<script src="lib/bootstrap.js"></script>
+
+		<!-- Note: Add JS files here: build:js scripts/scripts.js -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main/main.js"></script>
+		<script src="scripts/controllers/navbar/navbar.js"></script>
+		<!-- endbuild -->
+
+	</body>
+</html>
